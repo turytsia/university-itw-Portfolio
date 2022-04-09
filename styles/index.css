@@ -1,0 +1,187 @@
+main {
+    height: 100vh;
+    background-color: #fff;
+    z-index: 1;
+    position: relative;
+}
+
+#about {
+    background-color: #fff;
+    height: 100%;
+    margin-top: 50px;
+}
+
+.about-title {
+    height: 100%;
+    background-color: var(--purple);
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10%;
+    border-radius: 0 0 50% 50%;
+}
+
+.about-title-header {
+    font-family: 'Questrial', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: var(--light-purple);
+}
+
+.about-title-subheader {
+    font-family: 'Questrial', sans-serif;
+    font-size: 70px;
+    color: white;
+}
+
+.about-aside {
+    height: 100%;
+    background-color: white;
+    width: 55%;
+    margin-left: auto;
+    border-radius: 70% 40% 20% 40%;
+    margin-top: 100px;
+    padding: 15%;
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: 0.3px;
+    font-size: 18px;
+}
+
+.about-aside span:first-child {
+    display: block;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+
+.about-aside span {
+    font-weight: bold;
+    color: var(--purple);
+    font-size: 28px;
+}
+
+.skill-list-item {
+    margin: 50px 0;
+}
+
+.skill-list-item-stats {
+    font-family: 'Questrial', sans-serif;
+    color: var(--gray);
+    font-weight: bold;
+    font-size: 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 15px 0px;
+}
+
+.skill-list-item-tags {
+    padding-top: 30px;
+}
+
+.skill-list-item-tag {
+    padding: 7px 25px;
+    background-color: var(--purple);
+    border-radius: 20px;
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    font-size: 14px;
+}
+
+.skill-list-item-tag:not(:first-child) {
+    margin-left: 5px;
+}
+
+.skill-list-item-stats::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: var(--gray);
+}
+
+.skill-list-process {
+    background-color: var(--purple);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    z-index: 2;
+}
+
+.skill-list-percentage {
+    color: var(--purple);
+}
+
+.projects-title-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-title {
+    font-family: 'Questrial', sans-serif;
+    font-size: 35px;
+}
+
+.projects-title span {
+    color: var(--purple);
+    font-size: 45px;
+}
+
+.projects-list-item img {
+    width: 50%;
+    display: block;
+    border-radius: 60% 30% 60% 30%;
+}
+
+.projects-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projects-list-item:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+.projects-list-item {
+    font-family: 'Noto Sans', sans-serif;
+    text-align: justify;
+}
+
+.projects-list-item:not(:first-child) {
+    margin-top: 150px;
+}
+
+.projects-list-item p {
+    display: block;
+    margin-top: 20px;
+}
+
+.projects-list-item:nth-child(odd) p {
+    padding-right: 10%;
+}
+
+.projects-list-item:nth-child(even) .projects-list-item-content {
+    padding-left: 10%;
+}
+
+.projects-list-item-title {
+    padding: 10px;
+    font-size: 25px;
+    font-family: 'Questrial', sans-serif;
+    background-color: var(--purple);
+    display: inline;
+    color: white;
+}
+
+.projects-list-item-title span {
+    color: var(--light-purple);
+}
