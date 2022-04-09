@@ -10,6 +10,11 @@ a {
 
 body {
     overflow-x: hidden;
+    position: relative;
+}
+
+section {
+    background-color: white;
 }
 
 .wrapper {

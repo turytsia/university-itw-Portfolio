@@ -9,6 +9,7 @@ header {
 
 .header-top {
     height: 100vh;
+    position: relative;
 }
 
 .header-wrapper {
@@ -95,7 +96,7 @@ header .stairs-0 {
 
 #header-transition {
     width: 100%;
-    border-radius: 25% 25% 70% 70%;
+    border-radius: 55% 55% 70% 70%;
     height: 15vh;
     position: absolute;
     top: -50px;
@@ -103,4 +104,35 @@ header .stairs-0 {
     left: 0;
     z-index: 2;
     background-color: var(--purple);
+}
+
+.header-square-top {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 70px;
+    height: 70px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+}
+
+.header-square-bottom {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    width: 70px;
+    height: 70px;
+    border-bottom: 2px solid white;
+    border-left: 2px solid white;
+    z-index: -5;
+}
+
+header i {
+    font-size: 30px;
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    text-align: center;
+    color: white;
+    z-index: -5;
 }
