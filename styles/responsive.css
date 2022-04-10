@@ -154,6 +154,9 @@
 }
 
 @media screen and ( max-width:768px) {
+    .projects-slider-text {
+        text-align: center;
+    }
     .about-title {
         text-align: center;
         border-radius: 0 0 40px 40px;

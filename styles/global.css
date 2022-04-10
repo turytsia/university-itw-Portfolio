@@ -26,13 +26,6 @@ ul {
     list-style: none;
 }
 
-.section-title-wrapper {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 textarea,
 input {
     font-family: 'Noto Sans', sans-serif;
@@ -61,6 +54,12 @@ label {
     text-align: center;
 }
 
+.section-title-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .section-title {
     font-family: 'Questrial', sans-serif;
     font-size: var(--small-h);
@@ -70,19 +69,4 @@ label {
 .section-title span {
     color: var(--purple);
     font-size: var(--medium-h);
-}
-
-#skill-balloon {
-    position: absolute;
-    width: 400px;
-    right: 50px;
-    z-index: 5;
-}
-
-#projects-balloon {
-    position: absolute;
-    width: 200px;
-    left: 100px;
-    bottom: 60%;
-    z-index: 5;
 }

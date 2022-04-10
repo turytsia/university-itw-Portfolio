@@ -1,6 +1,6 @@
 #footer {
     position: absolute;
-    bottom: -18%;
+    bottom: -19%;
     right: 0;
     left: 0;
     z-index: 3;
@@ -177,4 +177,5 @@
 
 .feedback-rating {
     color: var(--purple);
+    margin-top: 5px;
 }

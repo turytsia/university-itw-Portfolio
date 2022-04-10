@@ -26,6 +26,7 @@ $(document).ready(() => {
                         <h4 class = "projects-slider-name">${repo.name}<i class="fa-brands fa-github"></i></h4>
                         <p class = "projects-slider-text">${repo.description}</p>
                     </a>
+                    <span class = "projects-slider-time">${moment(repo.created_at).fromNow()}</span>
                 </li>`)
             }
             $('#feedback-slider').slick({
