@@ -1,5 +1,5 @@
 header {
-    background-image: url('../i/header/bg.jpg');
+    background-image: url('../i/header/min/bg-min.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -58,32 +58,32 @@ header {
 }
 
 .header-4 {
-    background-image: url('../i/header/4.png');
+    background-image: url('../i/header/min/4-min.png');
     background-position: 0 0;
     z-index: -4;
 }
 
 .header-3 {
-    background-image: url('../i/header/3.png');
+    background-image: url('../i/header/min/3-min.png');
     background-position: center;
     background-position: 0 0;
     z-index: -3;
 }
 
 .header-2 {
-    background-image: url('../i/header/2.png');
+    background-image: url('../i/header/min/2-min.png');
     background-position: 0 150px;
     z-index: -2;
 }
 
 .header-1 {
-    background-image: url('../i/header/1.png');
+    background-image: url('../i/header/min/1-min.png');
     background-position: 30px 30%;
     z-index: -1;
 }
 
 .header-0 {
-    background-image: url('../i/header/0.png');
+    background-image: url('../i/header/min/0-min.png');
     background-size: 30%;
     background-position: 0 150%;
 }

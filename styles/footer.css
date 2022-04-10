@@ -4,7 +4,7 @@
     right: 0;
     left: 0;
     z-index: 3;
-    background-image: url('../i/footer/bg_footer.png');
+    background-image: url('../i/footer/min/bg_footer-min.png');
     background-size: cover;
     background-position: center;
 }
@@ -36,25 +36,25 @@
 }
 
 .footer-4 {
-    background-image: url('../i/footer/2.png');
+    background-image: url('../i/footer/min/2-min.png');
     bottom: 15%;
     z-index: -4;
 }
 
 .footer-3 {
-    background-image: url('../i/footer/1.png');
+    background-image: url('../i/footer/min/1-min.png');
     bottom: 10%;
     z-index: -3;
 }
 
 .footer-2 {
-    background-image: url('../i/footer/0.png');
+    background-image: url('../i/footer/min/0-min.png');
     bottom: 4%;
     z-index: -2;
 }
 
 .footer-1 {
-    background-image: url('../i/footer/3.png');
+    background-image: url('../i/footer/min/3-min.png');
     bottom: 5%;
     z-index: -1;
 }
