@@ -33,12 +33,56 @@ ul {
     align-items: center;
 }
 
+textarea,
+input {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.8em;
+    border: 2px solid var(--light-purple);
+    padding: 7px;
+    border-radius: 12px;
+    display: block;
+    width: 100%;
+}
+
+textarea:focus,
+input:focus {
+    outline: auto 2px var(--yellow);
+}
+
+textarea {
+    resize: vertical;
+}
+
+label {
+    font-family: 'Questrial', sans-serif;
+    display: block;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
 .section-title {
     font-family: 'Questrial', sans-serif;
-    font-size: 35px;
+    font-size: var(--small-h);
+    text-align: center;
 }
 
 .section-title span {
     color: var(--purple);
-    font-size: 45px;
+    font-size: var(--medium-h);
+}
+
+#skill-balloon {
+    position: absolute;
+    width: 400px;
+    right: 50px;
+    z-index: 5;
+}
+
+#projects-balloon {
+    position: absolute;
+    width: 200px;
+    left: 100px;
+    bottom: 60%;
+    z-index: 5;
 }

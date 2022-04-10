@@ -7,6 +7,26 @@ header {
     z-index: -10;
 }
 
+.header-social a {
+    color: white;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.header-social a:not(:first-child) {
+    margin-left: 20px;
+}
+
+.header-social {
+    font-size: var(--large-h);
+    position: absolute;
+    left: 1em;
+    top: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .header-top {
     height: 100vh;
     position: relative;
@@ -22,7 +42,7 @@ header {
     font-weight: 300;
     color: white;
     letter-spacing: 1.7px;
-    font-size: 80px;
+    font-size: var(--extra-large-h);
     height: 100%;
     display: flex;
     justify-content: center;
@@ -37,61 +57,46 @@ header {
     top: 0;
 }
 
-header .stairs-4 {
+.header-4 {
     background-image: url('../i/header/4.png');
-    background-size: cover;
     background-position: 0 0;
+    z-index: -4;
 }
 
-header .stairs-3 {
+.header-3 {
     background-image: url('../i/header/3.png');
-    background-size: cover;
     background-position: center;
     background-position: 0 0;
+    z-index: -3;
 }
 
-header .stairs-2 {
+.header-2 {
     background-image: url('../i/header/2.png');
-    background-size: cover;
     background-position: 0 150px;
+    z-index: -2;
 }
 
-header .stairs-1 {
+.header-1 {
     background-image: url('../i/header/1.png');
-    background-size: cover;
     background-position: 30px 30%;
+    z-index: -1;
 }
 
-header .stairs-0 {
+.header-0 {
     background-image: url('../i/header/0.png');
     background-size: 30%;
     background-position: 0 150%;
 }
 
-.stairs {
+.header-parallax {
     position: absolute;
+    background-size: cover;
     right: 0;
     left: 0;
     top: 0;
     bottom: 0;
     background-repeat: no-repeat;
     height: 100%;
-}
-
-.bg-level-4 {
-    z-index: -4;
-}
-
-.bg-level-3 {
-    z-index: -3;
-}
-
-.bg-level-2 {
-    z-index: -2;
-}
-
-.bg-level-1 {
-    z-index: -1;
 }
 
 #header-transition {
@@ -108,30 +113,30 @@ header .stairs-0 {
 
 .header-square-top {
     position: absolute;
-    top: 50px;
-    right: 50px;
-    width: 70px;
-    height: 70px;
+    top: 1em;
+    right: 1em;
+    width: 2em;
+    height: 2em;
     border-top: 2px solid white;
     border-right: 2px solid white;
 }
 
 .header-square-bottom {
     position: absolute;
-    bottom: 50px;
-    left: 50px;
-    width: 70px;
-    height: 70px;
+    bottom: 1em;
+    left: 1em;
+    width: 2em;
+    height: 2em;
     border-bottom: 2px solid white;
     border-left: 2px solid white;
     z-index: -5;
 }
 
-header i {
+.fa-angles-down {
     font-size: 30px;
     position: absolute;
-    bottom: 50px;
-    right: 50px;
+    bottom: 1em;
+    right: 1em;
     text-align: center;
     color: white;
     z-index: -5;

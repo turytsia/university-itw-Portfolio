@@ -3,6 +3,7 @@ main {
     z-index: 1;
     position: relative;
     background-color: var(--purple);
+    padding-bottom: 70px;
 }
 
 #about {
@@ -36,20 +37,21 @@ main {
 .about-title-header {
     font-family: 'Questrial', sans-serif;
     font-weight: 300;
-    font-size: 40px;
+    font-size: var(--large-h);
     color: var(--light-purple);
 }
 
 .about-title-subheader {
     font-family: 'Questrial', sans-serif;
-    font-size: 70px;
+    font-size: var(--extra-large-h);
     color: white;
+    padding-bottom: 20px;
 }
 
 .about-aside {
     height: 100%;
     background-color: white;
-    width: 55%;
+    width: 60%;
     margin-left: auto;
     border-radius: 70% 40% 20% 40%;
     margin-top: 100px;
@@ -68,7 +70,7 @@ main {
 .about-aside span {
     font-weight: bold;
     color: var(--purple);
-    font-size: 28px;
+    font-size: 20px;
 }
 
 .skill-list-item {
@@ -79,7 +81,7 @@ main {
     font-family: 'Questrial', sans-serif;
     color: var(--gray);
     font-weight: bold;
-    font-size: 26px;
+    font-size: var(--extra-small-h);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -89,6 +91,9 @@ main {
 
 .skill-list-item-tags {
     padding-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .skill-list-item-tag {
@@ -97,11 +102,12 @@ main {
     border-radius: 20px;
     font-family: 'Noto Sans', sans-serif;
     color: white;
-    font-size: 14px;
+    font-size: 0.8em;
+    white-space: nowrap;
 }
 
 .skill-list-item-tag:not(:first-child) {
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .skill-list-item-stats::after {
@@ -138,37 +144,45 @@ main {
 
 .projects-title {
     font-family: 'Questrial', sans-serif;
-    font-size: 35px;
+    font-size: var(--small-h);
+    text-align: center;
 }
 
 .projects-title span {
     color: var(--purple);
-    font-size: 45px;
+    font-size: var(--medium-h);
 }
 
 .projects-list-item img {
     width: 50%;
     display: block;
-    border-radius: 60% 30% 60% 30%;
+    border-radius: 20px;
+    transform: rotateY(-40deg);
+}
+
+.projects-list-item:nth-child(even) img {
+    transform: rotateY(40deg);
 }
 
 .projects-list-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Noto Sans', sans-serif;
+    text-align: justify;
+    perspective: 1200px;
 }
 
 .projects-list-item:nth-child(odd) {
     flex-direction: row-reverse;
 }
 
-.projects-list-item {
-    font-family: 'Noto Sans', sans-serif;
-    text-align: justify;
-}
-
 .projects-list-item:not(:first-child) {
     margin-top: 150px;
+}
+
+.projects-list-item:last-child {
+    margin-bottom: 70px;
 }
 
 .projects-list-item p {
@@ -186,7 +200,7 @@ main {
 
 .projects-list-item-title {
     padding: 10px;
-    font-size: 25px;
+    font-size: var(--small-h);
     font-family: 'Questrial', sans-serif;
     background-color: var(--purple);
     display: inline;
@@ -201,6 +215,11 @@ main {
     padding-bottom: 100vh;
 }
 
+.projects-list-item-link {
+    color: var(--light-purple);
+    text-decoration: underline;
+}
+
 .project-transition {
     position: absolute;
     background-color: white;
@@ -212,14 +231,50 @@ main {
     border-radius: 0 0 30% 30%;
 }
 
-.wishes {
-    position: absolute;
-    bottom: 100px;
-    font-size: 60px;
+.projects-slider-item {
+    background-color: var(--purple);
+    padding: 50px 20px;
+    font-family: 'Noto Sans', sans-serif;
     text-align: center;
+    margin: 0 10px;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.projects-slider-item p {
+    color: white;
+}
+
+.projects-slider-name {
+    color: var(--light-purple);
+    font-family: 'Questrial', sans-serif;
+    font-size: var(--medium-h);
+    margin-bottom: 10px;
+}
+
+.projects-slider-name i {
+    padding-left: 10px;
+}
+
+.wishes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    font-size: var(--small-h);
     color: var(--light-purple);
     font-family: 'Questrial', sans-serif;
     right: 0;
     left: 0;
     letter-spacing: 1.7px;
+    z-index: 5;
+    background-color: var(--purple);
+    height: 20vh;
+    border-radius: 20% 20% 0 0;
+}
+
+#inertia {
+    width: 100%;
 }

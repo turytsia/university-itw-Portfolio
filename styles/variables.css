@@ -1,0 +1,13 @@
+:root {
+    /* colors */
+    --purple: #732BBF;
+    --gray: #b8b8b8;
+    --light-purple: #c895ff;
+    --yellow: #ffc400;
+    /* sizes */
+    --extra-large-h: 3em;
+    --large-h: 2em;
+    --medium-h: 1.5em;
+    --small-h: 1.3em;
+    --extra-small-h: 1.2em;
+}

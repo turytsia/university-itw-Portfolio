@@ -9,19 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- styles -->
     <link rel="stylesheet" href="./styles/global.css" />
-    <link rel="stylesheet" href="./styles/colors.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/index.css" />
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- scripts -->
-    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script defer src="./scripts/parallax.js"></script>
-    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script defer src="./scripts/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,19 +27,27 @@
 
 <body>
     <div id="inertia">
-        <header>
+        <header id='header'>
             <div class="header-top">
+                <div class="header-social">
+                    <a href="https://github.com/turytsia">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/alexander-turytsia-422089224/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
                 <h1 id="header-title" class="header-title" data-aos="fade-up">Hello</h1>
                 <div class="header-square-top" data-aos="fade-down-left" data-aos-offset="-100"></div>
                 <div class="header-square-bottom" data-aos="fade-up-right" data-aos-offset="-100"></div>
                 <i class="fa-solid fa-angles-down  animate__animated animate__bounce animate__infinite"></i>
             </div>
             <div class="header-wrapper">
-                <div id="bg-level-4" class="stairs-4 bg-level-4 stairs"></div>
-                <div id="bg-level-3" class="stairs-3 bg-level-3 stairs"></div>
-                <div id="bg-level-2" class="stairs-2 bg-level-2 stairs"></div>
-                <div id="bg-level-1" class="stairs-1 bg-level-1 stairs"></div>
-                <div id="bg-level-0" class="stairs-0 stairs"></div>
+                <div id="bg-level-4-header" class="header-4 header-parallax"></div>
+                <div id="bg-level-3-header" class="header-3 header-parallax"></div>
+                <div id="bg-level-2-header" class="header-2 header-parallax"></div>
+                <div id="bg-level-1-header" class="header-1 header-parallax"></div>
+                <div id="bg-level-0-header" class="header-0 header-parallax"></div>
             </div>
         </header>
         <main>
@@ -53,14 +58,15 @@
                         <h2 class="about-title-header">Let's get closer,</h2>
                         <h2 class="about-title-subheader">shall we?</h2>
                     </div>
-                    <aside class="about-aside">
-                        <span>My name is Alexander</span>, I am a student of
-                        <span>VUT</span> University in Brno, Czech Republic, but came here from Ukraine and want to become the best full stack
-                        <span>web</span> and <span>app</span> developer
+                    <aside data-aos="zoom-in-up" class="about-aside">
+                        <span>My name is Alexander</span>I am a student of
+                        <span>VUT</span> University in Brno, Czech Republic, but I came here from Ukraine and want to become the best full stack
+                        <span>web</span> and <span>app</span> developer!
                     </aside>
                 </section>
             </section>
             <section id="skill">
+                <img id="skill-balloon" src="./i/balloon.png" alt="balloon">
                 <div class="section-title-wrapper">
                     <h2 class="section-title" data-aos="fade-up" data-aos-offset="-200">What about my <span>skillset</span> ?</h2>
                 </div>
@@ -132,6 +138,7 @@
                 </section>
             </section>
             <section id="projects">
+                <img id="projects-balloon" src="./i/balloon_2.png" alt="balloon">
                 <div class="projects-title-wrapper">
                     <h2 class="projects-title" data-aos="fade-up" data-aos-offset="-300">Any <span>projects</span> ?</h2>
                 </div>
@@ -142,9 +149,9 @@
                             <div class="projects-list-item-content">
                                 <h3 class="projects-list-item-title"> <span>Webapp</span> GOSURF</h3>
                                 <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae magnam fuga et cumque architecto, rem eius excepturi, molestias amet dolor labore dolorem ducimus velit quisquam deserunt dolores placeat. Voluptatibus, dolores. Laborum porro consectetur
-                                    quia adipisci quam voluptate, beatae ducimus culpa consequuntur. Molestiae nostrum excepturi dolore amet vel perferendis laboriosam delectus, illum maxime quam quae iste voluptate natus nobis praesentium error?
+                                    I made this project after watching the whole react course in order to practice new skills on a modern framework! I found the design on the internet.
                                 </p>
+                                <a class="projects-list-item-link" target="_blank" href="https://github.com/turytsia/webapp-gosurf">Learn more about the project here</a>
                                 <div class="skill-list-item-tags">
                                     <span class="skill-list-item-tag">HTML</span>
                                     <span class="skill-list-item-tag">CSS</span>
@@ -158,9 +165,9 @@
                             <div class="projects-list-item-content">
                                 <h3 class="projects-list-item-title"> <span>Webapp</span> ITW practice</h3>
                                 <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae magnam fuga et cumque architecto, rem eius excepturi, molestias amet dolor labore dolorem ducimus velit quisquam deserunt dolores placeat. Voluptatibus, dolores. Laborum porro consectetur
-                                    quia adipisci quam voluptate, beatae ducimus culpa consequuntur. Molestiae nostrum excepturi dolore amet vel perferendis laboriosam delectus, illum maxime quam quae iste voluptate natus nobis praesentium error?
+                                    This is not really a project, but all the tasks that needed to be done in practice. All of them were connected and in the end such a result should have been obtained.
                                 </p>
+                                <a class="projects-list-item-link" target="_blank" href="https://github.com/turytsia/university-itw-practice">Learn more about the project here</a>
                                 <div class="skill-list-item-tags">
                                     <span class="skill-list-item-tag">HTML</span>
                                     <span class="skill-list-item-tag">CSS</span>
@@ -170,14 +177,14 @@
                             </div>
                         </li>
 
-                        <li class="projects-list-item" data-aos="zoom-in-up" data-aos-offset="-500">
+                        <li class="projects-list-item" data-aos="zoom-in-up" data-aos-offset="-700">
                             <img src="./i/proj3.png" alt="proj" />
                             <div class="projects-list-item-content">
                                 <h3 class="projects-list-item-title"> <span>Webapp</span> ITW project 1</h3>
                                 <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae magnam fuga et cumque architecto, rem eius excepturi, molestias amet dolor labore dolorem ducimus velit quisquam deserunt dolores placeat. Voluptatibus, dolores. Laborum porro consectetur
-                                    quia adipisci quam voluptate, beatae ducimus culpa consequuntur. Molestiae nostrum excepturi dolore amet vel perferendis laboriosam delectus, illum maxime quam quae iste voluptate natus nobis praesentium error?
+                                    The first project in a university course was to recreate a design based on an HTML layout that had been written beforehand. It was fun, got it done in a day.
                                 </p>
+                                <a class="projects-list-item-link" target="_blank" href="https://github.com/turytsia/university-project-itw-1">Learn more about the project here</a>
                                 <div class="skill-list-item-tags">
                                     <span class="skill-list-item-tag">HTML</span>
                                     <span class="skill-list-item-tag">CSS</span>
@@ -187,30 +194,124 @@
                         </li>
                     </ul>
                 </div>
+                <ul id="projects-slider">
+                </ul>
                 <div class="project-transition"></div>
+            </section>
+            <section id="feedback">
+                <ul id="feedback-slider">
+                    <li class="feedback-item">
+                        <div class="feedback-img" style="background-image: url('./i/some_man.jpg');">
+                        </div>
+                        <div class="feedback-content">
+                            <h4 class="feedback-name">Some guy</h4>
+                            <p class="feedback-message">Here could be your feedback!</p>
+                        </div>
+                        <div class="feedback-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </li>
+
+                    <li class="feedback-item">
+                        <div class="feedback-img" style="background-image: url('./i/some_man.jpg');">
+                        </div>
+                        <div class="feedback-content">
+                            <h4 class="feedback-name">Some guy</h4>
+                            <p class="feedback-message">Here could be your feedback!</p>
+                        </div>
+                        <div class="feedback-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </li>
+
+                    <li class="feedback-item">
+                        <div class="feedback-img" style="background-image: url('./i/some_man.jpg');">
+                        </div>
+                        <div class="feedback-content">
+                            <h4 class="feedback-name">Some guy</h4>
+                            <p class="feedback-message">Here could be your feedback!</p>
+                        </div>
+                        <div class="feedback-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </li>
+                    <li class="feedback-item">
+                        <div class="feedback-img" style="background-image: url('./i/some_man.jpg');">
+                        </div>
+                        <div class="feedback-content">
+                            <h4 class="feedback-name">Some guy</h4>
+                            <p class="feedback-message">Here could be your feedback!</p>
+                        </div>
+                        <div class="feedback-rating">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </li>
+                </ul>
             </section>
             <footer id="footer">
                 <div class="footer-transition"></div>
                 <div class="footer-wrapper">
-                    <div id="bg-level-4-footer" class="footer-4 footer-parallax"></div>
-                    <div id="bg-level-3-footer" class="footer-3 footer-parallax"></div>
-                    <div id="bg-level-2-footer" class="footer-2 footer-parallax"></div>
-                    <div id="bg-level-1-footer" class="footer-1 footer-parallax"></div>
                     <section id="footer-section" class="footer-section">
                         <div class="footer-section-transition"></div>
                         <div class="wrapper">
                             <div class="footer-section-title-wrapper">
                                 <h2 class="footer-section-title">✨Contact <span>me</span>✨</h2>
                             </div>
+                            <form class="footer-section-form" action="#">
+                                <div class="footer-section-form-input">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" name="email" placeholder="name.surname@..">
+                                </div>
+                                <div class="footer-section-form-input">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" placeholder="Jimmy..">
+                                </div>
+                                <div class="footer-section-form-input">
+                                    <label for="title">Title</label>
+                                    <input type="text" name="title" placeholder="Bightest idea of..">
+                                </div>
+                                <div class="footer-section-form-input">
+                                    <label for="body">Describe it</label>
+                                    <textarea name="body" id="" cols="30" rows="10" placeholder="I would want to create..."></textarea>
+                                </div>
+
+                                <div class="footer-section-form-btn">
+                                    <button>Send</button>
+                                </div>
+                            </form>
                         </div>
                     </section>
+                    <div id="bg-level-4-footer" class="footer-4 footer-parallax"></div>
+                    <div id="bg-level-3-footer" class="footer-3 footer-parallax"></div>
+                    <div id="bg-level-2-footer" class="footer-2 footer-parallax"></div>
+                    <div id="bg-level-1-footer" class="footer-1 footer-parallax"></div>
                 </div>
             </footer>
             <h1 class="wishes">YOU ARE AWESOME!</h1>
         </main>
     </div>
     <!-- scripts  -->
-    <script src="./scripts/inertia.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="./scripts/index.js"></script>
+    <script defer src="./scripts/inertia.js"></script>
 </body>
 
 </html>

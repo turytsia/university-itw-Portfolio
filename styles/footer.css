@@ -1,13 +1,12 @@
 #footer {
     position: absolute;
-    bottom: -20%;
+    bottom: -18%;
     right: 0;
     left: 0;
     z-index: 3;
     background-image: url('../i/footer/bg_footer.png');
     background-size: cover;
     background-position: center;
-    height: 100vh;
 }
 
 .footer-transition {
@@ -31,45 +30,37 @@
     right: 0;
     left: 0;
     top: 0;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .footer-4 {
     background-image: url('../i/footer/2.png');
-    background-size: 100%;
-    background-position: bottom;
-    background-repeat: no-repeat;
+    bottom: 15%;
     z-index: -4;
-    bottom: -545%;
 }
 
 .footer-3 {
     background-image: url('../i/footer/1.png');
-    background-size: 100%;
-    background-position: bottom;
-    background-repeat: no-repeat;
+    bottom: 10%;
     z-index: -3;
-    bottom: -325%;
 }
 
 .footer-2 {
     background-image: url('../i/footer/0.png');
-    background-size: 100%;
-    background-position: bottom;
-    background-repeat: no-repeat;
+    bottom: 4%;
     z-index: -2;
-    bottom: -210%;
 }
 
 .footer-1 {
     background-image: url('../i/footer/3.png');
-    background-size: 100%;
-    background-position: bottom;
-    background-repeat: no-repeat;
+    bottom: 5%;
     z-index: -1;
-    bottom: -160%;
 }
 
 .footer-section {
+    border-radius: 40px;
     bottom: 0;
     right: 0;
     left: 0;
@@ -83,13 +74,107 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.footer-section-title {
-    font-size: 35px;
+    text-align: center;
+    font-size: var(--small-h);
 }
 
 .footer-section-title span {
     color: var(--purple);
-    font-size: 45px;
+    font-size: var(--medium-h);
+}
+
+.footer-section-form {
+    padding-top: 2em;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-areas: 'email name' 'title title' 'body body' 'btn btn';
+}
+
+.footer-section-form-btn button {
+    font-family: 'Questrial', sans-serif;
+    font-size: var(--extra-small-h);
+    background-color: var(--purple);
+    font-weight: 600px;
+    padding: 7px 35px;
+    color: var(--light-purple);
+    border-radius: 12px;
+    border: 2px solid transparent;
+    transition: .1s;
+    cursor: pointer;
+}
+
+.footer-section-form-btn button:hover {
+    color: var(--purple);
+    background-color: white;
+    border: 2px solid var(--light-purple);
+}
+
+.footer-section-form-input:nth-child(1) {
+    grid-area: email;
+}
+
+.footer-section-form-input:nth-child(2) {
+    grid-area: name;
+}
+
+.footer-section-form-input:nth-child(3) {
+    grid-area: title;
+}
+
+.footer-section-form-input:nth-child(4) {
+    grid-area: body;
+}
+
+.footer-section-form-btn {
+    grid-area: btn;
+}
+
+#feedback {
+    padding-top: 100px;
+    background-color: var(--purple);
+    height: 50vh;
+    z-index: -1;
+    position: absolute;
+    right: 0;
+    left: 0;
+}
+
+.feedback-slider {
+    margin: auto 0;
+}
+
+.feedback-item {
+    text-align: center;
+    display: inline-block;
+    background-color: var(--light-purple);
+    margin: 0 10px;
+    border-radius: 18px;
+    padding: 10px 0;
+}
+
+.feedback-img {
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    border: 4px solid var(--yellow);
+}
+
+.feedback-name {
+    font-family: 'Questrial', sans-serif;
+    font-size: var(--medium-h);
+    color: var(--purple);
+    margin-top: 5px;
+}
+
+.feedback-message {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: .8em;
+}
+
+.feedback-rating {
+    color: var(--purple);
 }
