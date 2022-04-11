@@ -76,21 +76,16 @@ $(document).ready(() => {
                 parallax_footer[3][0].style.transform = `translateY(${footer_speed/7}px)`
             }
 
-            const nav_buttons = $('nav-option')
-
             if (isInViewport('about') || isInViewport('project_slider_init')) {
-                nav_buttons.css('color', colors.light_purple)
+                $("#nav button").css('color', colors.light_purple)
             } else if ((!isInViewport('skill') && !isInViewport('projects')) || isInViewport('feedback_slider_init')) {
-                nav_buttons.css('color', 'white')
+                $("#nav button").css('color', 'white')
             } else {
-                nav_buttons.css('color', colors.purple)
+                $("#nav button").css('color', colors.purple)
             }
         }
 
         main.style.transform = `translate3d(-${dx}px, -${dy}px, 0px)`;
-
-
-
         window.requestAnimationFrame(render);
     }
 
