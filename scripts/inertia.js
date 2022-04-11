@@ -1,12 +1,6 @@
-const colors = {
-    purple: '#732BBF',
-    gray: '#b8b8b8',
-    light_purple: '#c895ff',
-    yellow: '#ffc400',
-}
-
 $(document).ready(() => {
 
+    //navigation click handling
     $("#about_btn").click(about_scroll_handler);
     $("#skill_btn").click(skill_scroll_handler);
     $("#projects_btn").click(projects_scroll_handler);
@@ -14,20 +8,6 @@ $(document).ready(() => {
 
     //hellos animation
     setInterval(hello_random, 300);
-
-    const nav_buttons = $("#nav button")
-
-    const levels_header = [document.getElementById('bg-level-4-header'),
-        document.getElementById('bg-level-3-header'),
-        document.getElementById('bg-level-2-header'),
-        document.getElementById('bg-level-1-header'),
-        document.getElementById('bg-level-0-header')
-    ]
-    const levels_footer = [document.getElementById('bg-level-4-footer'),
-        document.getElementById('bg-level-3-footer'),
-        document.getElementById('bg-level-2-footer'),
-        document.getElementById('bg-level-1-footer')
-    ]
 
     const body = document.body;
     const main = document.getElementById('inertia');
@@ -46,8 +26,7 @@ $(document).ready(() => {
     main.style.left = 0;
 
     // Bind a scroll function
-    window.addEventListener('scroll', easeScroll);
-
+    $(document).scroll(easeScroll)
 
     function easeScroll() {
 
@@ -70,44 +49,33 @@ $(document).ready(() => {
                 //header parallax
             const speed = -dy
 
-            levels_header[0].style.transform = `translateY(${speed/3}px)`
-            levels_header[1].style.transform = `translateY(${speed/3.5}px)`
-            levels_header[2].style.transform = `translateY(${speed/4}px)`
-            levels_header[3].style.transform = `translateY(${speed/5.5}px)`
-            levels_header[4].style.transform = `translateY(${speed/8}px)`
-                //body
-            $('#about').css('transform', `translateY(${speed/5}px)`)
-            $('#skill').css('transform', `translateY(${speed/5}px)`)
-            $('#projects').css('transform', `translateY(${speed/5}px)`)
-            $('#header-transition').css('transform', `translateY(${speed/5}px)`)
-            $('#footer').css('transform', `translateY(${speed/4.9}px)`)
-            $('#skill-balloon').css('transform', `translateY(${speed/5}px)`)
-            $('#projects-balloon').css('transform', `translateY(${speed/5}px)`)
-            $('#footer-section').css('transform', `translateY(${speed/5}px)`)
-            $('#feedback').css('transform', `translateY(${speed/5}px)`)
+            // for loops below suppose to move background
+            for (let i = 0; i < parallax_header.length; i++) {
+                parallax_header[i][0].style.transform = `translateY(${speed/(i+4)}px)`
+            }
 
-            if (isInViewport('about') || isInViewport('project_slider_init')) {
-                nav_buttons.css('color', colors.light_purple)
-            } else if ((!isInViewport('skill') && !isInViewport('projects')) || isInViewport('feedback_slider_init')) {
-                nav_buttons.css('color', 'white')
-            } else {
-                nav_buttons.css('color', colors.purple)
+            for (const element of parallax_elements) {
+                element.css('transform', `translateY(${speed/5}px)`)
             }
 
             const footer_speed = -(footer_offset - window.innerHeight / 2)
 
-            if (footer_offset - window.innerHeight <= 0) {
-                levels_footer[0].style.transform = `translateY(${footer_speed/25}px)`
-                levels_footer[1].style.transform = `translateY(${footer_speed/20}px)`
-                levels_footer[2].style.transform = `translateY(${footer_speed/10}px)`
-                levels_footer[3].style.transform = `translateY(${footer_speed/7}px)`
+            parallax_elements[0].css('transform', `translateY(${footer_speed/25}px)`)
+            parallax_elements[1].css('transform', `translateY(${footer_speed/20}px)`)
+            parallax_elements[2].css('transform', `translateY(${footer_speed/10}px)`)
+            parallax_elements[3].css('transform', `translateY(${footer_speed/7}px)`)
+
+            // changing navigation panel
+            if (isInViewport('about') || isInViewport('project_slider_init')) {
+                $("#nav button").css('color', colors.light_purple)
+            } else if ((!isInViewport('skill') && !isInViewport('projects')) || isInViewport('feedback_slider_init')) {
+                $("#nav button").css('color', 'white')
+            } else {
+                $("#nav button").css('color', colors.purple)
             }
         }
 
         main.style.transform = `translate3d(-${dx}px, -${dy}px, 0px)`;
-
-
-
         window.requestAnimationFrame(render);
     }
 
