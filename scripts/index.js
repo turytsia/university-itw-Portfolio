@@ -1,9 +1,4 @@
-const hello = ['Hello', 'নমস্কার', 'Привет', 'Ciao!', '안녕', 'Hola', '侬好', 'Halau', 'Oi']
-const stats = [90, 95, 85, 90, 70]
-const feedbacks = [
-        {}, {}, {}, {}, {}, {}, {}, {}
-    ]
-    // scroll functions
+// scroll functions
 const scroll_time = 1200
 
 function about_scroll_handler() {
@@ -47,11 +42,11 @@ function hello_random() {
 function create_project_slide({ name, description, html_url, created_at }) {
     const time = created_at.replace(/-/g, '.').slice(0, 10)
     return `<li class = "projects-slider-item">
-    <a target="_blank" href = "${html_url}">
-        <h4 class = "projects-slider-name">${name}<i class="fa-brands fa-github"></i></h4>
-        <p class = "projects-slider-text">${description}</p>
-    </a>
-    <span class = "projects-slider-time">${time}</span>
+<a target="_blank" href = "${html_url}">
+    <h4 class = "projects-slider-name">${name}<i class="fa-brands fa-github"></i></h4>
+    <p class = "projects-slider-text">${description}</p>
+</a>
+<span class = "projects-slider-time">${time}</span>
 </li>`
 }
 
@@ -63,15 +58,15 @@ function create_feedback_slide({ name = 'Some guy', message = 'Here could be you
         rating_starts += '<i class="fa-solid fa-star"></i>'
     }
     return `<li class="feedback-item">
-    <div class="feedback-img" style="background-image: url(${img_url});">
-    </div>
-    <div class="feedback-content">
-        <h4 class="feedback-name">${name}</h4>
-        <p class="feedback-message">${message}</p>
-    </div>
-    <div class="feedback-rating">
-        ${rating_starts}
-    </div>
+<div class="feedback-img" style="background-image: url(${img_url});">
+</div>
+<div class="feedback-content">
+    <h4 class="feedback-name">${name}</h4>
+    <p class="feedback-message">${message}</p>
+</div>
+<div class="feedback-rating">
+    ${rating_starts}
+</div>
 </li>`
 }
 
