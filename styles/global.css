@@ -61,6 +61,7 @@ label {
 }
 
 .section-title {
+    opacity: 0;
     font-family: 'Questrial', sans-serif;
     font-size: var(--small-h);
     text-align: center;

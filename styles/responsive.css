@@ -73,7 +73,7 @@
         display: inline-block;
         margin-bottom: 10px;
     }
-    .about-aside {
+    #about-aside {
         width: 60%;
         border-radius: 60% 40% 20% 40%;
     }
@@ -114,7 +114,7 @@
         display: inline-block;
         margin-bottom: 10px;
     }
-    .about-aside {
+    #about-aside {
         width: 100%;
         border-radius: 50%;
         margin: 0;
@@ -148,12 +148,27 @@
     .skill-list-item {
         padding: 10px 0;
     }
-    .about-title-content {
+    #about-title-content {
         text-align: center;
     }
 }
 
 @media screen and ( max-width:768px) {
+    #nav {
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+    }
+    .nav-options {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .nav-options span {
+        font-size: 0;
+    }
     .projects-slider-text {
         text-align: center;
     }
@@ -198,7 +213,7 @@
         display: inline-block;
         margin-bottom: 10px;
     }
-    .about-aside {
+    #about-aside {
         width: 100%;
         border-radius: 20% 20% 0 0;
         margin: 0;

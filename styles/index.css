@@ -1,3 +1,59 @@
+#nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav-options {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.nav-options button {
+    border: none;
+    background-color: transparent;
+    margin: 10px;
+    font-family: 'Questrial', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 0;
+    transition: .3s;
+    color: white;
+}
+
+.nav-option i {
+    padding-right: 5px;
+}
+
+.nav-options button::after,
+.nav-options button::before {
+    content: '';
+    bottom: 0;
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: .1s;
+    border-radius: 50%;
+}
+
+.nav-options button::after {
+    right: 50%;
+}
+
+.nav-options button::before {
+    left: 50%;
+}
+
+.nav-options button:hover::after {
+    width: 50%;
+}
+
+.nav-options button:hover::before {
+    width: 50%;
+}
+
 main {
     background-color: #fff;
     z-index: 1;
@@ -34,6 +90,10 @@ main {
     border-radius: 0 0 50% 50%;
 }
 
+#about-title-content {
+    opacity: 0;
+}
+
 .about-title-header {
     font-family: 'Questrial', sans-serif;
     font-weight: 300;
@@ -48,7 +108,7 @@ main {
     padding-bottom: 20px;
 }
 
-.about-aside {
+#about-aside {
     height: 100%;
     background-color: white;
     width: 60%;
@@ -59,15 +119,20 @@ main {
     font-family: 'Noto Sans', sans-serif;
     letter-spacing: 0.3px;
     font-size: 18px;
+    opacity: 0;
 }
 
-.about-aside span:first-child {
+#skill-title {
+    opacity: 0;
+}
+
+#about-aside span:first-child {
     display: block;
     padding-bottom: 20px;
     font-size: 30px;
 }
 
-.about-aside span {
+#about-aside span {
     font-weight: bold;
     color: var(--purple);
     font-size: 20px;
@@ -187,6 +252,7 @@ main {
     font-family: 'Noto Sans', sans-serif;
     text-align: justify;
     perspective: 1200px;
+    opacity: 0;
 }
 
 .projects-list-item:nth-child(odd) {
@@ -252,7 +318,6 @@ main {
     padding: 50px 20px;
     font-family: 'Noto Sans', sans-serif;
     text-align: center;
-    margin: 0 10px;
     letter-spacing: 0.8px;
     cursor: pointer;
     border-radius: 20px;

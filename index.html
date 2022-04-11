@@ -14,11 +14,10 @@
     <link rel="stylesheet" href="./styles/header.css" />
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="./styles/animations.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./styles/slider.css">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,6 +25,16 @@
 </head>
 
 <body>
+    <nav id="nav">
+        <div class="wrapper">
+            <div class="nav-options">
+                <button id="about_btn" class="nav-option"><i class="fa-solid fa-user-astronaut"></i><span>About</span></button>
+                <button id="skill_btn" class="nav-option"><i class="fa-solid fa-brain"></i></i><span>Skill</span></button>
+                <button id="projects_btn" class="nav-option"><i class="fa-solid fa-diagram-project"></i><span>Projects</span></button>
+                <button id="feedback_btn" class="nav-option"><i class="fa-solid fa-comment"></i><span>Feedback</span></button>
+            </div>
+        </div>
+    </nav>
     <div id="inertia">
         <header id='header'>
             <div class="header-top">
@@ -37,10 +46,10 @@
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
                 </div>
-                <h1 id="header-title" class="header-title" data-aos="fade-up">Hello</h1>
-                <div class="header-square-top" data-aos="fade-down-left" data-aos-offset="-100"></div>
-                <div class="header-square-bottom" data-aos="fade-up-right" data-aos-offset="-100"></div>
-                <i class="fa-solid fa-angles-down  animate__animated animate__bounce animate__infinite"></i>
+                <h1 id="header-title" class="header-title animation-fade-in">Hello</h1>
+                <div class="header-square-top  animation-fade-in"></div>
+                <div class="header-square-bottom  animation-fade-in"></div>
+                <i class="fa-solid fa-angles-down  animation-bounce"></i>
             </div>
             <div class="header-wrapper">
                 <div id="bg-level-4-header" class="header-4 header-parallax"></div>
@@ -54,11 +63,11 @@
             <section id="header-transition"></section>
             <section id="about">
                 <section class="about-title">
-                    <div class="about-title-content" data-aos="fade-up">
+                    <div id="about-title-content">
                         <h2 class="about-title-header">Let's get closer,</h2>
                         <h2 class="about-title-subheader">shall we?</h2>
                     </div>
-                    <aside data-aos="zoom-in-up" class="about-aside">
+                    <aside id="about-aside" class="about-aside">
                         <span>My name is Alexander</span>I am a student of
                         <span>VUT</span> University in Brno, Czech Republic, but I came here from Ukraine and want to become the best full stack
                         <span>web</span> and <span>app</span> developer!
@@ -68,7 +77,7 @@
             <section id="skill">
                 <img id="skill-balloon" src="./i/balloon.png" alt="balloon">
                 <div class="section-title-wrapper">
-                    <h2 class="section-title" data-aos="fade-up" data-aos-offset="-200">What about my <span>skillset</span> ?</h2>
+                    <h2 id="skill-title" class="section-title">What about my <span>skillset</span> ?</h2>
                 </div>
                 <section class="skill-content">
                     <div class="wrapper">
@@ -140,11 +149,11 @@
             <section id="projects">
                 <img id="projects-balloon" src="./i/balloon_2.png" alt="balloon">
                 <div class="section-title-wrapper">
-                    <h2 class="section-title" data-aos="fade-up" data-aos-offset="-300">Any <span>projects</span> ?</h2>
+                    <h2 class="section-title" id="projects-title">Any <span>projects</span> ?</h2>
                 </div>
                 <div class="wrapper">
                     <ul class="projects-list">
-                        <li class="projects-list-item" data-aos="zoom-in-up" data-aos-offset="-500">
+                        <li class="projects-list-item" id="projects-list-item-1">
                             <img src="./i/proj1.png" alt="proj" />
                             <div class="projects-list-item-content">
                                 <h3 class="projects-list-item-title"> <span>Webapp</span> GOSURF</h3>
@@ -160,7 +169,7 @@
                                 </div>
                             </div>
                         </li>
-                        <li class="projects-list-item" data-aos="zoom-in-up" data-aos-offset="-500">
+                        <li class="projects-list-item" id="projects-list-item-2">
                             <img src="./i/proj2.png" alt="proj" />
                             <div class="projects-list-item-content">
                                 <h3 class="projects-list-item-title"> <span>Webapp</span> ITW practice</h3>
@@ -177,7 +186,7 @@
                             </div>
                         </li>
 
-                        <li class="projects-list-item" data-aos="zoom-in-up" data-aos-offset="-700">
+                        <li class="projects-list-item" id="projects-list-item-3">
                             <img src="./i/proj3.png" alt="proj" />
                             <div class="projects-list-item-content">
                                 <h3 class="projects-list-item-title"> <span>Webapp</span> ITW project 1</h3>
@@ -194,75 +203,17 @@
                         </li>
                     </ul>
                 </div>
-                <ul id="projects-slider">
-                </ul>
+                <section id="project_slider_init" class="slider">
+                    <ul id="projects-slider" class="slick-track">
+                    </ul>
+                </section>
                 <div class="project-transition"></div>
             </section>
             <section id="feedback">
-                <ul id="feedback-slider">
-                    <li class="feedback-item">
-                        <div class="feedback-img" style="background-image: url('./i/some_man.jpg');">
-                        </div>
-                        <div class="feedback-content">
-                            <h4 class="feedback-name">Some guy</h4>
-                            <p class="feedback-message">Here could be your feedback!</p>
-                        </div>
-                        <div class="feedback-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                    </li>
-
-                    <li class="feedback-item">
-                        <div class="feedback-img" style="background-image: url('./i/some_man.jpg');">
-                        </div>
-                        <div class="feedback-content">
-                            <h4 class="feedback-name">Some guy</h4>
-                            <p class="feedback-message">Here could be your feedback!</p>
-                        </div>
-                        <div class="feedback-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                    </li>
-
-                    <li class="feedback-item">
-                        <div class="feedback-img" style="background-image: url('./i/some_man.jpg');">
-                        </div>
-                        <div class="feedback-content">
-                            <h4 class="feedback-name">Some guy</h4>
-                            <p class="feedback-message">Here could be your feedback!</p>
-                        </div>
-                        <div class="feedback-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                    </li>
-                    <li class="feedback-item">
-                        <div class="feedback-img" style="background-image: url('./i/some_man.jpg');">
-                        </div>
-                        <div class="feedback-content">
-                            <h4 class="feedback-name">Some guy</h4>
-                            <p class="feedback-message">Here could be your feedback!</p>
-                        </div>
-                        <div class="feedback-rating">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                    </li>
-                </ul>
+                <section id="feedback_slider_init" class="slider">
+                    <ul id="feedback-slider" class="slick-track">
+                    </ul>
+                </section>
             </section>
             <footer id="footer">
                 <div class="footer-transition"></div>
@@ -306,11 +257,10 @@
     </div>
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="./scripts/moment.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./scripts/index.js"></script>
     <script src="./scripts/inertia.js"></script>
+    <script src="./scripts/slider.js"></script>
+    <script src="./scripts/animations.js"></script>
 </body>
 
 </html>

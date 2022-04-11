@@ -1,0 +1,36 @@
+.animation-bounce {
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+.animation-fade-in {
+    animation: fade-in .4s 1 ease-out both;
+}
+
+@keyframes fade-in {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(30px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    75% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

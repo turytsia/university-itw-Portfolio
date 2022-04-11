@@ -1,0 +1,24 @@
+.slick-track {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    margin-left: 15%;
+}
+
+.slider {
+    transition: .7s;
+}
+
+.slick-track li {
+    transition: .5s;
+    flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: 0 20px;
+    transition: .5s;
+}
+
+.slide-current {
+    /* transform: scaleY(105%); */
+}

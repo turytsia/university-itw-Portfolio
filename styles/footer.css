@@ -139,17 +139,17 @@
     left: 0;
 }
 
-.feedback-slider {
-    margin: auto 0;
-}
-
 .feedback-item {
     text-align: center;
     display: inline-block;
     background-color: var(--light-purple);
-    margin: 0 10px;
     border-radius: 18px;
     padding: 10px 0;
+}
+
+#feedback-slider,
+#feedback_slider_init {
+    background-color: var(--purple);
 }
 
 .feedback-img {

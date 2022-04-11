@@ -1,4 +1,22 @@
+const colors = {
+    purple: '#732BBF',
+    gray: '#b8b8b8',
+    light_purple: '#c895ff',
+    yellow: '#ffc400',
+}
+
 $(document).ready(() => {
+
+    $("#about_btn").click(about_scroll_handler);
+    $("#skill_btn").click(skill_scroll_handler);
+    $("#projects_btn").click(projects_scroll_handler);
+    $("#feedback_btn").click(feedback_scroll_handler);
+
+    //hellos animation
+    setInterval(hello_random, 300);
+
+    const nav_buttons = $("#nav button")
+
     const levels_header = [document.getElementById('bg-level-4-header'),
         document.getElementById('bg-level-3-header'),
         document.getElementById('bg-level-2-header'),
@@ -67,6 +85,14 @@ $(document).ready(() => {
             $('#projects-balloon').css('transform', `translateY(${speed/5}px)`)
             $('#footer-section').css('transform', `translateY(${speed/5}px)`)
             $('#feedback').css('transform', `translateY(${speed/5}px)`)
+
+            if (isInViewport('about') || isInViewport('project_slider_init')) {
+                nav_buttons.css('color', colors.light_purple)
+            } else if ((!isInViewport('skill') && !isInViewport('projects')) || isInViewport('feedback_slider_init')) {
+                nav_buttons.css('color', 'white')
+            } else {
+                nav_buttons.css('color', colors.purple)
+            }
 
             const footer_speed = -(footer_offset - window.innerHeight / 2)
 
