@@ -1,3 +1,5 @@
+console.log('please reload the page if you want to see correct responsive design, mmmkay?')
+
 // scroll functions
 const scroll_time = 1200
 
