@@ -39,4 +39,4 @@ Titulek webu (záhlaví) bude fungovat jako odkaz na zvolené umístění webu (
 
 ## Score
 
-`- / 30`
+`28 / 30`
